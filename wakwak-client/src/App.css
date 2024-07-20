@@ -1,7 +1,7 @@
 /* src/App.css */
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Jua", sans-serif; /* 구글 폰트 설정 */
 }
 
 header {
@@ -28,7 +28,6 @@ main {
   padding: 10px 20px;
   background-color: white;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s;
   flex: 1;
   text-align: center;
@@ -53,12 +52,25 @@ main {
   border-radius: 5px;
   z-index: 1;
   width: 100%;
+  min-height: 240px; /* 최소 높이 설정 (가장 많은 서브메뉴 항목의 높이에 맞춤) */
 }
 
 .submenu li:hover {
-  color: violet;
+  color: rgb(0, 115, 210);
 }
 .submenu li {
   padding: 10px 20px;
   cursor: pointer;
+}
+
+/* src/App.css */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
